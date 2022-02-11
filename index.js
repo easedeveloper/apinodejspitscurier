@@ -17,7 +17,7 @@ app.use( express.urlencoded({ extended: true }) );
 app.use( cors() );
 
 // AÑADIENDO Routes DESDE ./routes/routesindex
-app.use( require('./routes/routes-index') );
+app.use( require('./src/routes/routes-index') );
 
 //EJECUTA EN EL PUERTO 3000
 app.connect(error =>{
