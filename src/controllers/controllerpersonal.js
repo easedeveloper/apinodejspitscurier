@@ -6,7 +6,8 @@ const pool = new Pool({
     user: 'pitscourier_postgres',
     password: '!agrc5i5!!',
     database: 'pitscourier_basenexdemo',
-    port: '5432'
+    port: '5432',
+    ssl: true
 });
 
 /*const pool = new Pool({
@@ -25,7 +26,7 @@ const get = (req, res) =>{
 }
 
 const getPersonal = async(req, res) =>{
-    const resp = await pool.query('SELECT correo, password from pitscourier_basenexdemo.public.personal');
+    const resp = await pool.query('SELECT correo, password from personal');
     //const resp = await pool.query('SELECT * FROM pitscurierheroku2.public.personal');
     res.status(200).json(resp.rows);
 };
