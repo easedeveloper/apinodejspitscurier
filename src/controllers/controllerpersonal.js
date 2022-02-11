@@ -31,7 +31,7 @@ const getPersonal = async(req, res) =>{
     res.status(200).json(resp.rows);
 };
 
-
+ 
 module.exports = {
     getPersonal,
     get
